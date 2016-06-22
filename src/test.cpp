@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
-#include <string>
+#include <cstring>
 #include <unordered_map>
 #include <ctime>
 #include <cmath>
@@ -81,12 +81,24 @@ int sqrtTest(){
 	cout << (int)sqrt(x) << endl;
 }
 
+string strTest(){
+	string str = "";
+	char num[16];
+	for (int i = 0; i < 20; i++){
+		memset(num, '\0', sizeof(num));
+		sprintf(num, "%d", i);
+		str += string(num) + " ";
+	}
+	cout << str << endl;
+}
+
 int main(int argc, char **argv){
 	//unorderedMapTest();
 	//readConfigTest(argv[1]);
 	//timeTest();
 	//randTest();
 	//strPrintTest();
-	sqrtTest();
+	//sqrtTest();
+	strTest();
 	return 0;
 }
